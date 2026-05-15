@@ -16,6 +16,7 @@ import React from 'react';
 import Image from 'next/image';
 import { FiBookmark, FiShare2, FiEye } from 'react-icons/fi';
 import { FaStar } from 'react-icons/fa';
+import Link from 'next/link';
 
 const MiddleInfo = ({ n }) => {
     const { title, author, thumbnail_url, details, rating, total_view } = n;
@@ -52,7 +53,9 @@ const MiddleInfo = ({ n }) => {
             {/* Details */}
             <div className="px-4 py-3">
                 <p className="text-sm text-gray-500 leading-relaxed line-clamp-3">{details}</p>
-                <span className="text-orange-500 font-semibold text-sm cursor-pointer">Read More</span>
+                <Link href={`/news/${n._id}`}>
+                    <span className="text-orange-500 font-semibold text-sm cursor-pointer">Read More</span>
+                </Link>
             </div>
 
             {/* Footer */}
