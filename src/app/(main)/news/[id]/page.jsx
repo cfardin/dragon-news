@@ -5,7 +5,7 @@ import NewsPage from '@/components/newspage/NewsPage';
 
 
 const getDetailsById = async(news_id) => {
-    const res = await fetch("https://openapi.programming-hero.com/api/news/0282e0e58a5c404fbd15261f11c2ab6a");
+    const res = await fetch(`https://openapi.programming-hero.com/api/news/${news_id}`);
     const data = await res.json();
 
     return data.data;
