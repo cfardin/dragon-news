@@ -19,7 +19,7 @@ import { FaStar } from 'react-icons/fa';
 import Link from 'next/link';
 
 const MiddleInfo = ({ n }) => {
-    const { title, author, thumbnail_url, details, rating, total_view } = n;
+    const {_id, title, author, thumbnail_url, details, rating, total_view } = n;
 
     return (
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-4">
@@ -53,7 +53,7 @@ const MiddleInfo = ({ n }) => {
             {/* Details */}
             <div className="px-4 py-3">
                 <p className="text-sm text-gray-500 leading-relaxed line-clamp-3">{details}</p>
-                <Link href={`/news/${n._id}`}>
+                <Link href={`/news/${_id}`}>
                     <span className="text-orange-500 font-semibold text-sm cursor-pointer">Read More</span>
                 </Link>
             </div>
